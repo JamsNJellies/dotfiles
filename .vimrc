@@ -3,7 +3,13 @@
 set shell=/bin/bash
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off   " required
+
+if empty(glob("~/.vim/bundle/Vundle.vim"))
+  silent! execute '!git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
+  autocmd VimEnter * silent! PluginInstall
+endif
+
 " Plugin Manager - Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
