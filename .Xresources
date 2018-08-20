@@ -1,0 +1,46 @@
+!
+!
+!    '\ // ||''. ||''| //''\  //\  ||  | ||''.  //'. ||''| //''\
+!      X/  ||-+' ||-   ``--. ||  | ||  | ||-+' ||    ||-   ``--.
+!  o _//\_ ||  \ ||__| \\__/  \\/  `\__' ||  \  \\_/ ||__| \\__/
+!
+!
+
+! ---
+! Colors
+! ---
+
+! Import colors
+#include ".config/colours/solarized"
+
+
+! ---
+! URxvt
+! ---
+
+URxvt*perl-ext-common: default,matcher,vtwheel,clipboard
+URxvt.font: xft:scientifica:size=9
+URxvt.letterSpace: +1
+URxvt.scrollBar: false
+URxvt*buffered: false
+URxvt*iso14755: false
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.internalBorder: 10
+
+! ---
+! Rofi
+! ---
+
+rofi.font: scientifica 11
+! Rofi colours: bg, border
+rofi.color-window: #111111, #111111
+! Rofi colours: bg, fg, bgalt, hlbg, hlfg
+rofi.color-normal: #111111, #ffffff, #111111, #222222, #ffffff
+rofi.height: 10
+rofi.width: 20
+rofi.padding: 15 
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.lines: 10
+rofi.line-padding: 4
