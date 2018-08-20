@@ -1,0 +1,16 @@
+#!/bin/bash
+
+SCRIPT_FOLDER="$HOME/bin"
+SCRIPT_FILE="$SCRIPT_FOLDER/$1"
+
+if [[ -f $SCRIPT_FILE ]]; then
+  vim $SCRIPT_FILE
+else
+  echo '#!/bin/bash' > $SCRIPT_FILE
+  echo ' '
+  chmod +x $SCRIPT_FILE
+  vim $SCRIPT_FILE
+fi
+
+
+

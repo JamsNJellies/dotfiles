@@ -1,0 +1,65 @@
+#!/bin/bash
+
+menu() {
+
+	playing=$( spotifycli --status)
+	
+	clear
+	echo ""
+	tput setf 6
+	echo "Music Player:"
+	tput sgr0
+	echo "Now playing: $playing"
+	echo ""
+	tput setf 3
+	read -p "> " input
+	tput sgr0
+
+	case $input in
+
+		toggle)
+			spotifycli --playpause
+			menu
+			;;
+		play)
+			spotifycli --play
+			menu
+			;;
+		pause)
+			spotifycli --pause
+			menu
+			;;
+		volup)
+			spotifycli --volumeup
+			menu
+			;;
+		voldown)
+			spotifycli --volumedown
+			menu
+			;;
+		next)
+			spotifycli --next
+			menu
+			;;
+		prev)
+			spotifycli --prev
+			menu
+			;;
+		exit)
+			exit
+			;;
+		*)
+			echo "Invalid Input"
+			menu
+			;;
+	esac
+}
+
+while true
+do
+	menu
+	sleep 5
+done
+
+
+

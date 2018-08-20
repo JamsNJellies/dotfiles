@@ -1,0 +1,3 @@
+#!/bin/bash
+
+figlet -f 3d $1 | lolcat

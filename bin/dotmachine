@@ -1,0 +1,107 @@
+#!/bin/bash
+
+#
+#  ||'\   //\  ['|'] ||\/|   ^    //'. ||  | '||'  |\  | ||''|
+#  ||  | ||  |   |   ||  |  //\  ||    ||--|  ||   ||\ | ||-  
+#  ||_/   \\/   .|   ||  | //''\  \\_/ ||  | .||.  || \| ||__|
+#
+# Dotmachine: A script for your dotfiles.
+# Authour: JamsNJellies
+#
+
+version="0.1"
+
+# Define Functions
+
+# Prints text in screen center
+print-center() {
+	
+	cols=$( tput cols )
+	rows=$( tput lines )
+
+	message=$1
+	input_length=${#message}
+
+	half_input_length=$(( $input_length / 2 ))
+	middle_row=$(( ($rows / 2) - $2 ))
+	middle_col=$(( ($cols / 2) - $half_input_length ))
+	
+	tput cup $middle_row $middle_col
+
+	echo $1
+	tput sgr0
+	tput cup $( tput lines ) 0
+}
+
+center-prompt() {
+	
+	cols=$( tput cols )
+	rows=$( tput lines )
+
+	message="Please select an option: "
+	input_length=${#message}
+
+	half_input_length=$(( $input_length / 2 ))
+	middle_row=$(( ($rows / 2) - $1 ))
+	middle_col=$(( ($cols / 2) - $half_input_length ))
+	
+	tput cup $middle_row $middle_col
+
+	read -p "Please select an option: " input
+	tput sgr0
+	tput cup $( tput lines ) 0
+}
+
+backup() {
+	echo "Reading configuration"
+}
+
+install() {
+	echo "Downloading configuration"
+}
+
+reset() {
+	echo "Resetting config"
+}
+
+# Main menu script, called from main
+menu() {
+
+	tput bold; tput setf 5
+	print-center "`tput bold` Dotmachine - Dotfile Manager" 5
+	print-center "version $version" 3
+	print-center "by JamsNJellies" 2
+	tput setf 5
+	print-center "Menu:               " 0
+	print-center "[1] Backup Dotfiles " -1
+	print-center "[2] Install Dotfiles" -2
+	print-center "[3] Reset config    " -3
+	print-center "[4] Exit            " -4
+	center-prompt -6
+	input
+
+}
+
+input() {
+	case $input in
+		1)
+			;;
+		2)
+			;;
+		3)
+			;;
+		4)
+			clear
+			exit
+			;;
+		?)
+			clear
+			tput cup $rows 0
+			echo "Error: Invalid input"
+			menu
+			;;
+	esac
+}
+
+clear
+menu

@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#
+#  //''\ ||  |  //\  ['|']
+#  ``--. ||--| ||  |   |  
+#  \\__/ ||  |  \\/   .|  
+#
+# Description:              A minimal screenshot manager
+# Dependencies:             imagemagick
+# Optionnal dependencies:   notf
+# Author:                   gawlk
+# Contributors:             none
+
+dir="${HOME}/pic/screenshots"
+mkdir -p "$dir" || exit 1
+
+date=$( date +%Y-%m-%d )
+time=$( date +%H-%M-%S )
+
+mkdir -p "${dir}/${date}"
+shot="${dir}/${date}/${date}-${time}"
+
+for number in 3 2 1
+do
+    notify-send -t 1000 "Screenshot in " "${number}..."
+    sleep 1
+done
+
+sleep 0.2
+
+import -window root "${shot}.png" &
+sleep 0.2
+notify-send -t 3000 "Shot taken !" &> /dev/null || printf '%s\n' "Shot taken !"
+
