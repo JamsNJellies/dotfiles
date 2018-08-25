@@ -360,4 +360,17 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/polybar-scripts/updates-arch-combined.sh
+interval = 600
+
+[module/system-usb-mount]
+type = custom/script
+exec = ~/polybar-scripts/system-usb-mount.sh
+interval = 5
+click-left = ~/polybar-scripts/system-usb-mount.sh --mount
+click-right = ~/polybar-scripts/system-usb-mount.sh --unmount
+
+
 ; vim:ft=dosini

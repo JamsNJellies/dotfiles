@@ -14,6 +14,7 @@ endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'junegunn/fzf'
 Plugin 'wimstefan/vim-artesanal'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
@@ -24,17 +25,24 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'raimondi/delimitmate'
+Plugin 'fatih/vim-go'
+
 
 call vundle#end()            
 filetype plugin indent on    
 
 " Theme
 syntax on
-set t_Co=256
 set cursorline
-colorscheme darkzen
-let g:airline_theme='badcat'
+colorscheme solarized
+set background=dark
+let g:airline_theme='solarized'
 
+" filetype stuff
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType css  setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
 " Mappings
 nnoremap ; :
