@@ -1,0 +1,79 @@
+#!/bin/zsh
+# JTheme - Bash theme manager
+# Author - JamsNJellies
+
+LOG="$HOME/.config/jtheme/log.txt"
+DIR="$HOME/.config/jtheme/"
+CURRENT="$HOME/.config/jtheme/current.txt"
+
+# -- Define Functions
+function set {
+	cd $DIR
+	cd $OPTARGS
+	if [ "$?" = "0" ]; then
+		echo "Entered into theme directory, attempting to set the theme."
+	else
+		echo "Could not enter into the theme directory, exiting"
+		sleep 0.5 
+		exit
+	fi
+}
+
+function list {
+	cd $DIR	
+	ls -d */ 
+	if [ "$?" = "0" ]; then
+		ls -d */
+	fi
+}
+
+function get {
+	if [ -f "$CURRENT" ]; then
+		source $CURRENT
+		echo $CURRENTTHEME
+	else
+		echo "The current theme could not be found or the theme has not been set."
+	fi
+}
+
+function help {
+
+	echo ""
+	echo "JTheme - Bash theme manager"
+	echo ""
+	echo " Options:"
+	echo "  Set - Sets the theme"
+	echo "  List - Lists available themes"
+	echo "  Get - Shows the current theme"
+	echo "  Help - Shows the help page"	
+	echo ""
+
+}
+
+# -- Clear logs
+
+if [ -f "$LOG" ]; then
+	rm $LOG
+	touch $LOG
+fi
+
+# -- Parse options and execute functions
+
+case "$1" in
+	set)
+		OPTARGS=$2
+		set 
+		;;
+	list)
+		list
+		;;
+	get)
+		get
+		;;
+	help)
+		help
+		;;
+	*)
+		help
+		;;
+esac

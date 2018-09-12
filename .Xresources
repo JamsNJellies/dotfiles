@@ -11,7 +11,7 @@
 ! ---
 
 ! Import colors
-#include ".config/colours/solarized"
+#include ".config/colours/mountains"
 
 
 ! ---
@@ -26,17 +26,17 @@ URxvt*buffered: false
 URxvt*iso14755: false
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.internalBorder: 10
+URxvt.internalBorder: 25
 
 ! ---
 ! Rofi
 ! ---
 
-rofi.font: scientifica 11
+rofi.font: scientifica 9
 ! Rofi colours: bg, border
-rofi.color-window: #111111, #111111
+rofi.color-window: #040913, #040913
 ! Rofi colours: bg, fg, bgalt, hlbg, hlfg
-rofi.color-normal: #111111, #ffffff, #111111, #222222, #ffffff
+rofi.color-normal: #040913, #e3e1e6, #040913, #09142B, #e3e1e6
 rofi.height: 10
 rofi.width: 20
 rofi.padding: 15 

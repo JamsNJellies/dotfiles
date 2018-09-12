@@ -9,6 +9,8 @@
 
 # i3 config file (v4)
 
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+
 # Open Quick Terminal
 exec --no-startup-id urxvt -name QuickTerm
 for_window [instance="QuickTerm"] floating enable;
@@ -19,9 +21,9 @@ exec setxkbmap gb
 
 exec_always --no-startup-id ~/bin/polystart 
 exec_always --no-startup-id compton
-exec nitrogen --restore
-for_window [class="^.*"] border pixel 5, title_format "%title "
-exec xsettingsd
+exec --no-startup-id nitrogen --restore
+for_window [class="^.*"] border pixel 3, title_format "%title "
+exec --no-startup-id xsettingsd
 
 # Gaps
 gaps inner 5
@@ -50,8 +52,8 @@ set_from_resource $cyan    color6      #5E8D87
 set_from_resource $grey    color7      #969CD3
 
 # class                 bd    bg  txt    ind   child_bd
-client.focused          $grey $bg $red   #222222 #222222
-client.unfocused        $grey $bg $black $bg   $bg
+client.focused          $grey $bg $red   $bg   $bg
+client.unfocused        $grey $bg $bg   $bg   $bg
 client.focused_inactive $grey $bg $black $bg   $bg
 client.urgent           $red  $bg $red   $red  $red
 client.placeholder      $grey $bg $bg    $bg   $bg
@@ -66,7 +68,7 @@ bindsym $mod+Return exec urxvt -title Terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# start rofi (a program launcher)
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+x exec ~/bin/menu -l
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -167,6 +169,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+F2 exec "xfce4-settings-manager"
 
 # Scratchpad
 bindsym $mod+z move to scratchpad

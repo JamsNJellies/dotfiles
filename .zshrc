@@ -60,6 +60,7 @@ alias ohmyzsh='vim ~/.oh-my-zsh'
 alias py='python'
 alias please='sudo $(fc -ln -1) '
 alias rm='trash'
+alias ls='exa'
 
 # Set Path
 PATH={$PATH}:/home/james/bin:/usr/lib/ruby/gems/2.5.0/gems/:/home/james/.gem/ruby/2.5.0/gems
