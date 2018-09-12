@@ -34,7 +34,7 @@ filetype plugin indent on
 syntax on
 set background=dark
 colorscheme default
-highlight EndOfBuffer ctermfg=8
+highlight EndOfBuffer ctermfg=0
 set noruler
 
 " filetype stuff
