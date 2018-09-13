@@ -22,7 +22,7 @@ exec setxkbmap gb
 exec_always --no-startup-id ~/bin/polystart 
 exec_always --no-startup-id compton
 exec --no-startup-id nitrogen --restore
-for_window [class="^.*"] border pixel 3, title_format "%title "
+for_window [class="^.*"] border pixel 4, title_format "%title "
 exec --no-startup-id xsettingsd
 
 # Gaps
@@ -52,8 +52,8 @@ set_from_resource $cyan    color6      #5E8D87
 set_from_resource $grey    color7      #969CD3
 
 # class                 bd    bg  txt    ind   child_bd
-client.focused          $grey $bg $red   $bg   $bg
-client.unfocused        $grey $bg $bg   $bg   $bg
+client.focused          $grey $bg $red   $fg   $fg
+client.unfocused        $grey $bg $bg    $bg   $bg
 client.focused_inactive $grey $bg $black $bg   $bg
 client.urgent           $red  $bg $red   $red  $red
 client.placeholder      $grey $bg $bg    $bg   $bg

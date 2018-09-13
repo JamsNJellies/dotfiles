@@ -33,7 +33,7 @@ filetype plugin indent on
 " Theme
 syntax on
 set background=dark
-colorscheme default
+colorscheme pablo
 highlight EndOfBuffer ctermfg=0
 set noruler
 

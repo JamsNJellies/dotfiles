@@ -52,16 +52,16 @@
 
 [base16_low]
     msg_urgency = low
-    background = "#111111"
-    foreground = "#ffffff"
+    background = "#040913"
+    foreground = "#e1e3e6"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#111111"
-    foreground = "#ffffff"
+    background = "#040913"
+    foreground = "#e1e3e6"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#222222"
-    foreground = "#ffffff"
+    background = "#040913"
+    foreground = "#e1e3e6"
 # vim: ft=cfg
