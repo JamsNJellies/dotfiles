@@ -1,0 +1,39 @@
+! Mountains Colorscheme - By JamsNJellies
+
+! Special
+*.foreground:  #e3e1e6 
+*.background:  #040913 
+*.cursorColor: #ffffff
+
+! Black
+*.color0:  #040913      
+*.color8:  #495979      
+
+! Red
+*.color1:  #739dbf
+*.color9:  #739dbf
+
+! Green
+*.color2:  #7377bf
+*.color10: #7377bf
+
+! Yellow
+*.color3:  #7377bf
+*.color11: #7377bf
+
+! Blue
+*.color4:  #73bfbb
+*.color12: #73bfbb
+
+! Magenta
+*.color5:  #739dbf
+*.color13: #739dbf
+
+! Cyan
+*.color6:  #73bfbb
+*.color14: #73bfbb
+
+! White
+*.color7:  #e3e1e6
+*.color15: #e3e1e6
+
