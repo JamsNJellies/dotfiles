@@ -8,7 +8,37 @@
 #  ░░░░░░░░ ░░░░░░░░  ░░      ░░ 
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/james/.oh-my-zsh
+export ZSH=/home/james/.oh-my-zsh
+
+# pytify
+export SPOTIPY_CLIENT_ID='a48657b93b0648879eb4f7139a0630a9'
+export SPOTIPY_CLIENT_SECRET='7e58d728d3694beb98ed1bf0b267e509'
+
+# Antigen
+source $HOME/.oh-my-zsh/antigen.zsh
+
+# Load oh-my-zsh library
+antigen use oh-my-zsh
+
+# Default repo bundles
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# Antigen Bundles
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+
+# Must be last bundle
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Antigen apply
+antigen apply 
+
+# keybinds
+bindkey '^ ' autosuggest-accept
 
 ZSH_THEME="jellies"
 
@@ -55,6 +85,7 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+alias weather=' curl -s wttr.in/london | head -n 7 && printf "\n"  '
 alias zshconfig='vim ~/.zshrc'
 alias ohmyzsh='vim ~/.oh-my-zsh'
 alias py='python'
@@ -69,3 +100,5 @@ PATH={/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr
 # Startup
 fetch
 
+# Hook for desk activation
+[ -n "$DESK_ENV" ] && source "$DESK_ENV" || true

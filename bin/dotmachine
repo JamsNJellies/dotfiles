@@ -52,31 +52,20 @@ center-prompt() {
 	tput cup $( tput lines ) 0
 }
 
-backup() {
-	echo "Reading configuration"
-}
 
-install() {
-	echo "Downloading configuration"
-}
-
-reset() {
-	echo "Resetting config"
-}
-
-# Main menu script, called from main
 menu() {
 
 	tput bold; tput setf 5
-	print-center "`tput bold` Dotmachine - Dotfile Manager" 5
+	print-center "Dotfiles - YADM Wrapper" 5
 	print-center "version $version" 3
 	print-center "by JamsNJellies" 2
 	tput setf 5
 	print-center "Menu:               " 0
-	print-center "[1] Backup Dotfiles " -1
-	print-center "[2] Install Dotfiles" -2
-	print-center "[3] Reset config    " -3
-	print-center "[4] Exit            " -4
+	print-center "[1] Push Dotfiles" -1
+	print-center "[2] Pull Dotfiles" -2
+	print-center "[3] Repo Status  " -3
+	print-center "[4] Commit       " -4
+	print-center "[5] Exit         " -5
 	center-prompt -6
 	input
 
@@ -85,15 +74,22 @@ menu() {
 input() {
 	case $input in
 		1)
+			yadm push
 			;;
 		2)
+			yadm pull
 			;;
 		3)
+			yadm status
 			;;
 		4)
+			yadm commit
+			;;
+		5)
 			clear
 			exit
 			;;
+			
 		?)
 			clear
 			tput cup $rows 0

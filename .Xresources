@@ -27,6 +27,7 @@ URxvt*iso14755: false
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.internalBorder: 25
+URxvt.cursorUnderline: 1
 
 ! ---
 ! Rofi

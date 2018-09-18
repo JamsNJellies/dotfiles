@@ -26,7 +26,6 @@ Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'raimondi/delimitmate'
 Plugin 'fatih/vim-go'
 
-
 call vundle#end()            
 filetype plugin indent on    
 
@@ -37,6 +36,7 @@ colorscheme pablo
 highlight EndOfBuffer ctermfg=0
 set noruler
 
+
 " filetype stuff
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css  setlocal shiftwidth=2 tabstop=2
@@ -44,3 +44,5 @@ autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
 " Mappings
 nnoremap ; :
+
+

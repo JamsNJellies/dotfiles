@@ -50,15 +50,15 @@ set_from_resource $yellow  color3      #DE935F
 set_from_resource $blue    color4      #05C6F1
 set_from_resource $purple  color5      #85678F
 set_from_resource $cyan    color6      #5E8D87
-set_from_resource $grey    color7      #969CD3
+set_from_resource $grey    color8      #969CD3
 
 # class                 bd    bg  txt    ind   child_bd
 client.focused          $grey $bg $red   $fg   $fg
-client.unfocused        $grey $bg $bg    $bg   $bg
-client.focused_inactive $grey $bg $black $bg   $bg
+client.unfocused        $grey $bg $bg    $bg   $grey
+client.focused_inactive $grey $bg $black $bg   $grey
 client.urgent           $red  $bg $red   $red  $red
-client.placeholder      $grey $bg $bg    $bg   $bg
-client.background $bg
+client.placeholder      $grey $bg $bg    $bg   $grey
+client.background       $bg   $bg $bg    $bg   $grey
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
