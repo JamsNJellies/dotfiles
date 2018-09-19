@@ -78,7 +78,7 @@ export LANG=en_GB.UTF-8
 
 # Editor
 export EDITOR='vim'
-
+export PAGER='most'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -93,6 +93,7 @@ alias please='sudo $(fc -ln -1) '
 alias rm='trash'
 alias ls='exa' 
 alias lsa='exa -al --header --grid'
+alias todo='notes open todo'
 # Set Path
 PATH={$PATH}:/home/james/bin:/usr/lib/ruby/gems/2.5.0/gems/:/home/james/.gem/ruby/2.5.0/gems
 PATH={/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl}:/home/james/bin:/usr/lib/ruby/gems/2.5.0/gems/:/home/james/.gem/ruby/2.5.0/bin:/home/james/build/art
