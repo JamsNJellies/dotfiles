@@ -25,6 +25,7 @@ Plugin 'reedes/vim-colors-pencil'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'raimondi/delimitmate'
 Plugin 'fatih/vim-go'
+Plugin 'JamsNJellies/jellystatus'
 
 call vundle#end()            
 filetype plugin indent on    
