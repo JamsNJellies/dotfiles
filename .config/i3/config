@@ -11,6 +11,7 @@
 
 exec xrdb ~/.Xresources
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+exec ~/bin/usage track
 
 # Open Quick Terminal
 exec --no-startup-id urxvt -name QuickTerm

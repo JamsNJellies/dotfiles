@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+case "$1" in
+       install
