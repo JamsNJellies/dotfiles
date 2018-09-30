@@ -11,6 +11,7 @@
 
 exec xrdb ~/.Xresources
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+exec ~/bin/usage clear
 exec ~/bin/usage track
 
 # Open Quick Terminal
@@ -19,11 +20,11 @@ for_window [instance="QuickTerm"] floating enable;
 for_window [instance="QuickTerm"] move scratchpad; 
 bindsym $mod+t [instance="QuickTerm"] scratchpad show
 
+exec hsetroot -solid '#2E3440'
 exec setxkbmap gb
 
 exec_always --no-startup-id ~/bin/polystart 
 exec_always --no-startup-id compton
-exec --no-startup-id nitrogen --restore
 for_window [class="^.*"] border pixel 4, title_format "%title "
 exec --no-startup-id xsettingsd
 
@@ -55,7 +56,7 @@ set_from_resource $grey    color8      #969CD3
 
 # class                 bd    bg  txt    ind   child_bd
 client.focused          $grey $bg $red   $fg   $fg
-client.unfocused        $grey $bg $bg    $bg   $grey
+client.unfocused        $grey $bg $red   $fg   $grey
 client.focused_inactive $grey $bg $black $bg   $grey
 client.urgent           $red  $bg $red   $red  $red
 client.placeholder      $grey $bg $bg    $bg   $grey

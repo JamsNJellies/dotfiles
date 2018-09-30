@@ -11,7 +11,7 @@
 ! ---
 
 ! Import colors
-#include ".config/colours/mountains"
+#include ".config/colours/nord"
 
 
 ! ---
@@ -28,6 +28,7 @@ URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.internalBorder: 25
 URxvt.cursorUnderline: 1
+URxvt.fading: 0
 
 ! ---
 ! Rofi
@@ -35,9 +36,9 @@ URxvt.cursorUnderline: 1
 
 rofi.font: scientifica 9
 ! Rofi colours: bg, border
-rofi.color-window: #040913, #040913
+rofi.color-window: #3B4252, #3B4252
 ! Rofi colours: bg, fg, bgalt, hlbg, hlfg
-rofi.color-normal: #040913, #e3e1e6, #040913, #09142B, #e3e1e6
+rofi.color-normal: #3B4252, #D8DEE9, #3B4252, #4C566A, #D8DEE9
 rofi.height: 10
 rofi.width: 20
 rofi.padding: 15 

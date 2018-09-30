@@ -2,8 +2,8 @@
 
 set shell=/bin/bash
 
-set nocompatible              
-filetype off   
+set nocompatible
+filetype off
 
 if empty(glob("~/.vim/bundle/Vundle.vim"))
   silent! execute '!git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
@@ -26,24 +26,60 @@ Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'raimondi/delimitmate'
 Plugin 'fatih/vim-go'
 Plugin 'JamsNJellies/jellystatus'
+Plugin 'valloric/youcompleteme'
+Plugin 'mhinz/vim-startify'
+Plugin 'junegunn/limelight.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'arcticicestudio/nord-vim'
 
-call vundle#end()            
-filetype plugin indent on    
+call vundle#end()
+filetype plugin indent on
 
 " Theme
 syntax on
 set background=dark
-colorscheme pablo
+colorscheme nord
 highlight EndOfBuffer ctermfg=0
 set noruler
 
+" Startify
+   let g:startify_custom_header = [
+            \ '      :::     ::::::::::::::  :::   ::: ',
+            \ '     :+:     :+:    :+:     :+:+: :+:+: ',
+            \ '    +:+     +:+    +:+    +:+ +:+:+ +:+ ',
+            \ '   +#+     +:+    +#+    +#+  +:+  +#+  ',
+            \ '   +#+   +#+     +#+    +#+       +#+   ',
+            \ '   #+#+#+#      #+#    #+#       #+#    ',
+            \ '    ###    ##############       ###     ',
+            \ ]
+     let g:startify_lists = [
+          \ { 'type': 'commands',  'header': ['   Commands']       },
+          \ { 'type': 'files',     'header': ['   Recent Files']   },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ ]
+
+
+
+" Sign Column background
+highlight SignColumn ctermbg=0
+
+" CS checking
+let g:ycm_autoclose_preview_window_after_insertion = 1
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
+" NERD Tree
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " filetype stuff
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css  setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
+let g:limelight_conceal_ctermfg = 0
+
 " Mappings
 nnoremap ; :
-
-
