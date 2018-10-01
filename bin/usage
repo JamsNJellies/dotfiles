@@ -9,7 +9,9 @@ EMAIL="jez_palmer@yahoo.com"
 case $1 in
 	track)
 		cd $DIRECTORY
-		while true; do thyme track -o thyme.json; sleep 30s; done;
+		while true; do 
+			thyme track -o thyme.json; sleep 30s 
+		done
 		;;
 	show)
 		cd $DIRECTORY
