@@ -65,7 +65,7 @@ print-packages()
  
 print-wm()
 {
-      color-echo 'WM' 'i3'
+      color-echo 'WM' 'cwm'
 }
  
 print-distro()
@@ -80,7 +80,7 @@ print-distro()
  
 echo
 echo -en " " && print-distro
-echo -en " " && print-kernel
+echo -en " " && print-packages
 echo -en " " && print-wm
 echo -en " " && print-shell
 echo -en " " && print-uptime

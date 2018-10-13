@@ -32,7 +32,19 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-xrdb .Xresources
+export QT_STYLE_OVERRIDE=gtk
+export QT_QPA_PLATFORMTHEME=qgnomeplatform
 
-setxkbmap -option caps:escape
-exec i3
+
+# Start inportant stuff
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+
+setxkbmap gb
+xrdb .Xresources
+setxkbmap -option caps:escape &
+exec usage clear &
+exec usage track &
+exec cwm &
+exec nitrogen --restore &
+exec $HOME/bin/polystart &
+exec compton

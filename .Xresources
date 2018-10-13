@@ -11,7 +11,7 @@
 ! ---
 
 ! Import colors
-#include ".config/colours/nord"
+#include ".config/colours/gruvbox"
 
 
 ! ---
@@ -36,9 +36,9 @@ URxvt.fading: 0
 
 rofi.font: scientifica 9
 ! Rofi colours: bg, border
-rofi.color-window: #3B4252, #3B4252
+rofi.color-window: #282828, #EBDBB2
 ! Rofi colours: bg, fg, bgalt, hlbg, hlfg
-rofi.color-normal: #3B4252, #D8DEE9, #3B4252, #4C566A, #D8DEE9
+rofi.color-normal: #282828, #EBDBB2, #282828, #32302f, #EBDBB2
 rofi.height: 10
 rofi.width: 20
 rofi.padding: 15 
@@ -46,3 +46,4 @@ rofi.separator-style: none
 rofi.hide-scrollbar: true
 rofi.lines: 10
 rofi.line-padding: 4
+rofi.bw: 4

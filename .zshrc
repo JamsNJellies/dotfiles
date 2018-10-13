@@ -10,9 +10,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/james/.oh-my-zsh
 
-# pytify
-export SPOTIPY_CLIENT_ID='a48657b93b0648879eb4f7139a0630a9'
-export SPOTIPY_CLIENT_SECRET='7e58d728d3694beb98ed1bf0b267e509'
+# Gopath
+export GOPATH=$HOME/Go
 
 # Antigen
 source $HOME/.oh-my-zsh/antigen.zsh
@@ -77,7 +76,7 @@ source ~/bin/zsh/tmuxinator.zsh
 export LANG=en_GB.UTF-8
 
 # Editor
-export EDITOR='vim'
+export EDITOR='nvim'
 export PAGER='most'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -91,11 +90,12 @@ alias ohmyzsh='vim ~/.oh-my-zsh'
 alias py='python'
 alias please='sudo $(fc -ln -1) '
 alias rm='trash'
+alias vim='nvim'
 alias ls='exa' 
 alias lsa='exa -al --header --grid'
 alias todo='notes open todo'
 # Set Path
-PATH={$PATH}:/home/james/bin:/usr/lib/ruby/gems/2.5.0/gems/:/home/james/.gem/ruby/2.5.0/gems
+PATH={$PATH}:/home/james/bin:/usr/lib/ruby/gems/2.5.0/gems/:/home/james/.gem/ruby/2.5.0/gems:$GOPATH/bin:/home/james/.art
 PATH={$PATH}:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/james/bin:/usr/lib/ruby/gems/2.5.0/gems/:/home/james/.gem/ruby/2.5.0/bin
 
 # Startup
@@ -103,3 +103,5 @@ fetch
 
 # Hook for desk activation
 [ -n "$DESK_ENV" ] && source "$DESK_ENV" || true
+
+zmodload zsh/zpty

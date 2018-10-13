@@ -30,9 +30,7 @@ while getopts ":hvqwcbrl" opt; do
             exit 0
             ;;
         r)
-            rofi -modi run,drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "ArchLabs-Light"
+            rofi -modi run,drun -show drun 
             ;;
         w)
             rofi -modi window -show window -hide-scrollbar \
@@ -62,7 +60,10 @@ while getopts ":hvqwcbrl" opt; do
             case "$ANS" in
 		*Lock) ~/bin/lock ;;
                 *Switch) dm-tool lock ;;
-                *Logout) i3-msg exit;;
+                *Logout)
+		       	killall usage
+			i3-msg exit
+			;;
                 *Reboot) reboot ;;
                 *Shutdown) systemctl -i poweroff
             esac
