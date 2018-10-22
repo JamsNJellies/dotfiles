@@ -29,6 +29,7 @@ color groupborder	'#b8bb26'
 color ungroupborder	'#8ec07c'
 
 # Keybinds
+bind-key 4-p 		"/home/james/bin/shot"
 bind-key 4-Return	"urxvt"
 bind-key 4-q		window-delete
 bind-key 4-f		window-maximize

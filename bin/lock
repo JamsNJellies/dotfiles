@@ -2,7 +2,7 @@
 # Lock Script
 # Authour: JamsNJellies
 
-file="$HOME/pic/Wallpapers/lock.jpg"
+file="$HOME/pic/Wallpapers/lock.png"
 
 PARAM=(--bar-indicator --bar-position h --bar-direction 1 --redraw-thread -t "" \
 	--bar-step 50 --bar-width 250 --bar-base-width 50 --bar-max-height 100 --bar-periodic-step 50 \

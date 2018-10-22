@@ -58,12 +58,12 @@ while getopts ":hvqwcbrl" opt; do
                 rofi -sep "|" -dmenu -i -p 'System' "" -width 20 \
                 -hide-scrollbar -eh 1 -line-padding 4 -padding 20 -lines 5)
             case "$ANS" in
-		*Lock) ~/bin/lock ;;
+				Lock) ~/bin/lock ;;
                 *Switch) dm-tool lock ;;
-                *Logout)
-		       	killall usage
-			i3-msg exit
-			;;
+                *Logout) 
+					killall xinit
+					logout
+					;;
                 *Reboot) reboot ;;
                 *Shutdown) systemctl -i poweroff
             esac

@@ -35,14 +35,12 @@ fi
 export QT_STYLE_OVERRIDE=gtk
 export QT_QPA_PLATFORMTHEME=qgnomeplatform
 
-
 # Start inportant stuff
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
-setxkbmap gb
-xrdb .Xresources
-setxkbmap -option caps:escape &
-exec usage clear &
+exec setxkbmap gb &
+exec xrdb .Xresources &
+exec setxkbmap -option caps:escape &
 exec usage track &
 exec cwm &
 exec nitrogen --restore &

@@ -3,22 +3,22 @@
 
 case $1 in
 	get)
-		notify-send -t 500 "Volume: $(pamixer --get-volume)%"
+		notify-send -t 400 "Volume: $(pamixer --get-volume)%"
 		;;
 	up)
 		if [[ $(pamixer --get-volume) -lt 100 ]]; then
 			pactl set-sink-volume @DEFAULT_SINK@ +5%
-			notify-send -t 500 "Volume: $(pamixer --get-volume)%"
+			notify-send -t 400 "Volume: $(pamixer --get-volume)%"
 		fi
 		;;
 	down)
-		if [[ $(pamixer --get-volume) -gt 0 ]]; then			
+		if [[ $(pamixer --get-volume) -gt 0 ]]; then
 			pactl set-sink-volume @DEFAULT_SINK@ -5%
-			notify-send -t 500 "Volume: $(pamixer --get-volume)%"
+			notify-send -t 400 "Volume: $(pamixer --get-volume)%"
 		fi
 		;;
 	*)
 		exit
 		;;
 esac
-	
+

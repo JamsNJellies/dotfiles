@@ -13,13 +13,12 @@
 ! Import colors
 #include ".config/colours/gruvbox"
 
-
 ! ---
 ! URxvt
 ! ---
 
 URxvt*perl-ext-common: default,matcher,vtwheel,clipboard
-URxvt.font: xft:scientifica:size=9
+URxvt.font: xft:scientifica:pixelsize=9, xft:Wuncon Sijji:pixelsize=9
 URxvt.letterSpace: +1
 URxvt.scrollBar: false
 URxvt*buffered: false
