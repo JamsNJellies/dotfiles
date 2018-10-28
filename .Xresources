@@ -11,7 +11,7 @@
 ! ---
 
 ! Import colors
-#include ".config/colours/gruvbox"
+#include ".config/colours/trees"
 
 ! ---
 ! URxvt
@@ -35,9 +35,9 @@ URxvt.fading: 0
 
 rofi.font: scientifica 9
 ! Rofi colours: bg, border
-rofi.color-window: #282828, #EBDBB2
+rofi.color-window: #242623, #E5E2D0
 ! Rofi colours: bg, fg, bgalt, hlbg, hlfg
-rofi.color-normal: #282828, #EBDBB2, #282828, #32302f, #EBDBB2
+rofi.color-normal: #242623, #E5E2D0, #242623, #32302f, #E5E2D0
 rofi.height: 10
 rofi.width: 20
 rofi.padding: 15 

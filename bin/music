@@ -2,7 +2,7 @@
 
 menu() {
 
-	playing=$( spotifycli --status)
+	playing=$(mpc current)
 	
 	clear
 	echo ""
@@ -18,31 +18,31 @@ menu() {
 	case $input in
 
 		toggle)
-			spotifycli --playpause
+			mpc toggle
 			menu
 			;;
 		play)
-			spotifycli --play
+			mpc play
 			menu
 			;;
 		pause)
-			spotifycli --pause
+			mpc pause
 			menu
 			;;
 		volup)
-			spotifycli --volumeup
+			mpc volume +10
 			menu
 			;;
 		voldown)
-			spotifycli --volumedown
+			mpc volume -10
 			menu
 			;;
 		next)
-			spotifycli --next
+			mpc next
 			menu
 			;;
 		prev)
-			spotifycli --prev
+			mpc prev
 			menu
 			;;
 		exit)

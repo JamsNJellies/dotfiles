@@ -44,5 +44,4 @@ exec setxkbmap -option caps:escape &
 exec usage track &
 exec cwm &
 exec nitrogen --restore &
-exec $HOME/bin/polystart &
 exec compton

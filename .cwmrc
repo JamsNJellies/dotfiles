@@ -4,7 +4,7 @@
 fontname		"scientifica:pixelsize=10"
 
 # Gap
-gap			0 45 0 0
+gap			20 20 20 20
 
 # Snap distance
 snapdist		10
@@ -22,13 +22,21 @@ command term		urxvt
 command launcher	"rofi -show drun"
 
 # Border colors
-color activeborder	'#ebdbb2'
-color inactiveborder	'#32302f'
-color urgencyborder	'#fb4934'
-color groupborder	'#b8bb26'
-color ungroupborder	'#8ec07c'
+color menufg 		 '#242623'
+color font 			 '#E5E2D0'
+color menubg 		 '#242623'
+color activeborder	 '#E5E2D0'
+color inactiveborder '#32302f'
+color urgencyborder	 '#fb4934'
+color groupborder	 '#b8bb26'
+color ungroupborder	 '#8ec07c'
+
+# Unbind defaults
+unbind-key all
+unbind-mouse all
 
 # Keybinds
+bind-key 4-t 		"/home/james/bin/wmutils/tile.sh"
 bind-key 4-p 		"/home/james/bin/shot"
 bind-key 4-Return	"urxvt"
 bind-key 4-q		window-delete
@@ -46,7 +54,7 @@ bind-key 4-v 		"/home/james/bin/volctrl up"
 bind-key 4-c		"/home/james/bin/volctrl down"
 
 # mouse controls 
-bind-mouse  4-1         window-move
+bind-mouse  4-1     window-move
 bind-mouse  4-2 	window-maximize
 bind-mouse  4S-2 	window-fullscreen
 bind-mouse  4-3		window-resize

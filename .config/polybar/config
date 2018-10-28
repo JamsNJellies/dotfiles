@@ -61,16 +61,16 @@ cursor-scroll = ns-resize
 
 [module/music]
 type = custom/script
-exec = ~/polybar-scripts/player-mpris-simple.sh
+exec = ~/polybar-scripts/music.sh
 interval = 0.5
-click-left = playerctl previous
-click-right = playerctl next
-click-middle = playerctl play-pause
+click-left = mpc toggle
+click-middle = urxvt -e ncmpcpp
+click-right = mpc next
 
 [module/workspaces]
 type           = custom/script
 interval       = 0.01
-exec           = $HOME/polybar-scripts/workspaces.sh
+exec           = $HOME/polybar-scripts/workspaces.sh 2>/dev/null
 
 [module/date]
 type = internal/date
