@@ -18,7 +18,7 @@ rst="\e[0m"
  
 color-echo()
 {  # print with colors
-  echo -e " $ylw$1: $rst$2"
+  echo -e "$grn$1 $cyn- $rst$2"
 }
  
 print-kernel()

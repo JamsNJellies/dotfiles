@@ -1,0 +1,38 @@
+! JamsNJellies Pond Koi colourscheme based on a pixel art gif
+! special
+*.foreground:  #ECFFEC 
+*.background:  #031728
+*.cursorColor: #ECFFEC 
+
+! black
+*.color0:       #031728
+*.color8:       #254351
+
+! red
+*.color1:      #BF3842
+*.color9:      #EC4556
+
+! green
+*.color2:      #078F4A
+*.color10:     #0AB855
+
+! yellow
+*.color3:       #B88128
+*.color11:      #CBA432
+
+! blue
+*.color4:       #042433
+*.color12:      #052F43
+
+! magenta
+*.color5:       #005BBD
+*.color13:      #007BFF
+
+! cyan
+*.color6:       #04402F
+*.color14:      #06684D
+
+! white
+*.color7:      #ECFFEC 
+*.color15:     #A0B1B1
+

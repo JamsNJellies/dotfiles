@@ -1,6 +1,0 @@
-#!/bin/zsh
-
-DIR="$HOME/.config/jtheme/"
-
-cd $DIR
-pwd

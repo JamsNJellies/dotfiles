@@ -11,7 +11,7 @@
 ! ---
 
 ! Import colors
-#include ".config/colours/trees"
+#include ".config/colours/pond-koi"
 
 ! ---
 ! URxvt
@@ -35,9 +35,9 @@ URxvt.fading: 0
 
 rofi.font: scientifica 9
 ! Rofi colours: bg, border
-rofi.color-window: #242623, #E5E2D0
+rofi.color-window: #111111, #ffffff
 ! Rofi colours: bg, fg, bgalt, hlbg, hlfg
-rofi.color-normal: #242623, #E5E2D0, #242623, #32302f, #E5E2D0
+rofi.color-normal: #111111, #ffffff, #111111, #222222, #ffffff
 rofi.height: 10
 rofi.width: 20
 rofi.padding: 15 

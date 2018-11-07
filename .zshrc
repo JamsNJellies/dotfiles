@@ -4,15 +4,13 @@ export LANG=en_GB.UTF-8
 
 # Editor
 export EDITOR='nvim'
-export PAGER='most'
-export BROWSER='chromium'
-export GAPS=5
+export BROWSER='surf'
 
 # Set Path
-PATH={$PATH}:/home/james/bin:$GOPATH/bin
+PATH="$PATH:/home/jams/bin"
 
 # Load JellyZSH
-source ~/.config/JellyZSH/jellyzsh.zsh
+source $HOME/.config/JellyZSH/jellyzsh.zsh
 
 # JellyZSH plugins
 plugin "zsh-users/zsh-autosuggestions"

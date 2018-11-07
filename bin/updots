@@ -1,4 +1,0 @@
-#!/bin/bash
-cd ~
-cp -r ~/dot/* ~/git/dots/
-cp ~/.Xresources ~/git/dots/

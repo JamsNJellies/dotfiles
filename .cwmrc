@@ -22,22 +22,18 @@ command term		urxvt
 command launcher	"rofi -show drun"
 
 # Border colors
-color menufg 		 '#242623'
-color font 			 '#E5E2D0'
-color menubg 		 '#242623'
-color activeborder	 '#E5E2D0'
-color inactiveborder '#32302f'
-color urgencyborder	 '#fb4934'
-color groupborder	 '#b8bb26'
-color ungroupborder	 '#8ec07c'
+color menufg 		 '#111111'
+color font 		 '#ffffff'
+color menubg 		 '#111111'
+color activeborder	 '#ffffff'
+color inactiveborder 	 '#222222'
 
 # Unbind defaults
 unbind-key all
 unbind-mouse all
 
 # Keybinds
-bind-key 4-t 		"/home/james/bin/wmutils/tile.sh"
-bind-key 4-p 		"/home/james/bin/shot"
+bind-key 4-p 		"/home/jams/bin/shot"
 bind-key 4-Return	"urxvt"
 bind-key 4-q		window-delete
 bind-key 4-f		window-maximize
@@ -46,12 +42,12 @@ bind-key 4-d		"rofi -show drun"
 bind-key 4S-Tab 	"rofi -show window"
 bind-key 4-Tab		window-cycle
 bind-key 4S-r 		restart
-bind-key 4-x 		"/home/james/bin/menu -l"
-bind-key 4S-E		"/home/james/bin/drawterm"
+bind-key 4S-x 		"killall xinit"
+bind-key 4S-E		"/home/jams/bin/drawterm"
 
 # Audio controls
-bind-key 4-v 		"/home/james/bin/volctrl up"
-bind-key 4-c		"/home/james/bin/volctrl down"
+bind-key 4-v 		"/home/jams/bin/volctrl up"
+bind-key 4-c		"/home/jams/bin/volctrl down"
 
 # mouse controls 
 bind-mouse  4-1     window-move
